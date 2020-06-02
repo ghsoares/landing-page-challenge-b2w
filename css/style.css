@@ -8,6 +8,7 @@
 html {
     scroll-behavior: smooth;
     overflow-x: hidden;
+    font-size: 16px;
 }
 
 main, #pages {
@@ -31,22 +32,29 @@ main, #pages {
     display: inline-block;
 }
 
+.section > section > p {
+    float: right;
+    margin: 0 32px;
+    margin-top: 80px;
+    font-size: 150%;
+}
+
 .section .section-title {
     position: relative;
     margin-top: 96px;
     margin-left: 16px;
-    font-size: 48px;
+    font-size: 300%;
     font-weight: 400;
 }
 
 .tilted-bottom {
     position: absolute;
     background-color: white;
-    width: 200%;
-    height: 80%;
+    width: 100%;
+    height: 70%;
     bottom: 0;
     left: 50%;
-    transform: rotate(-5deg) translateX(-50%);
+    transform: translateX(-50%);
     box-shadow: 0px 0px 32px rgba(0, 0, 0, 0.25);
     z-index: 0;
 }
@@ -54,11 +62,11 @@ main, #pages {
 .tilted-top {
     position: absolute;
     background-color: white;
-    width: 200%;
-    height: 75%;
-    top: -75%;
+    width: 100%;
+    height: 25%;
+    top: 0;
     left: 50%;
-    transform: rotate(-5deg) translateX(-50%);
+    transform: translateX(-50%);
     box-shadow: 0px 0px 32px rgba(0, 0, 0, 0.25);
     z-index: 0;
 }
@@ -85,13 +93,6 @@ main, #pages {
     color: white;
 }
 
-#empresa p {
-    float: right;
-    margin: 0 32px;
-    margin-top: 80px;
-    font-size: 24px;
-}
-
 #empresa-logo {
     position: relative;
     width: 10%;
@@ -105,17 +106,17 @@ main, #pages {
     margin-top: 64px;
     justify-content: center;
     align-items: center;
-    filter: drop-shadow(8px 8px 8px rgba(43, 10, 10, 0.521));
+    filter: drop-shadow(8px 8px 8px rgba(0, 0, 0, 0.521));
 }
 
 .problema {
     width: 256px;
     padding: 32px 16px;
     box-sizing: border-box;
-    background-color: #8E3B05;
+    background-color: #686868;
     border-radius: 16px;
     color: white;
-    font-size: 18px;
+    font-size: 100%;
     position: relative;
 }
 
@@ -134,7 +135,7 @@ main, #pages {
 .problema-separator {
     width: 64px;
     height: 8px;
-    background-color: #8E3B05;
+    background-color: #686868;
 }
 
 #problema-fluxg {
@@ -165,8 +166,16 @@ main, #pages {
     left: 50%;
     transform: translateX(-50%);
     width: 4px;
-    height: 256px;
+    height: 40%;
     background-color: rgb(6, 255, 180);
+}
+
+#solucao .tilted-bottom {
+    height: 60%;
+}
+
+#solucao p {
+    margin-top: 25%;
 }
 
 #solucao #app-logo {
@@ -179,17 +188,49 @@ main, #pages {
     box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.25);
 }
 
-#solucao p {
-    padding: 0 48px;
-    margin-top: 20%;
-    font-size: 24px;
-}
-
 #equipe-lista {
     display: flex;
     flex-direction: column;
     margin-top: 80px;
     padding: 0 32px;
+}
+
+.membro {
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    background-color: white;
+    border-radius: 16px;
+    align-items: center;
+    box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.25);
+}
+
+.membro:not(:first-child) {
+    margin-top: 12px;
+}
+
+.membro-img {
+    width: 48px;
+}
+
+.nome-atribuicao {
+    margin-left: 32px;
+}
+
+.nome-atribuicao h2 {
+    font-size: 150%;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.nome-atribuicao h4 {
+    color: #565656;
+    font-size: 95%;
+}
+
+.membro p {
+    margin-left: 64px;
+    font-size: 100%;
 }
 
 #contato .section-title {
@@ -205,13 +246,13 @@ main, #pages {
     margin: 48px;
     margin-top: 24px;
     border-radius: 16px;
-    font-size: 16px;
+    font-size: 90%;
 }
 
 #contato input {
     margin-bottom: 24px;
     margin-top: 12px;
-    font-size: 16px;
+    font-size: 80%;
     border: 0;
     padding: 8px 16px;
     border-radius: 8px;
@@ -227,43 +268,11 @@ main, #pages {
 
 #contato textarea {
     margin-top: 12px;
-    font-size: 16px;
+    font-size: 80%;
     border: 0;
     padding: 8px 16px;
     border-radius: 8px;
     resize: none;
-}
-
-.membro {
-    display: flex;
-    flex-direction: row;
-    padding: 16px;
-    background-color: white;
-    border-radius: 16px;
-    align-items: center;
-    box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.25);
-}
-
-.membro:not(:first-child) {
-    margin-top: 12px;
-}
-
-.nome-atribuicao {
-    margin-left: 32px;
-}
-
-.nome-atribuicao h2 {
-    font-size: 24px;
-    font-weight: 600;
-    margin-bottom: 8px;
-}
-
-.nome-atribuicao h4 {
-    color: #565656;
-}
-
-.membro p {
-    margin-left: 128px;
 }
 
 #fixed {
@@ -276,10 +285,6 @@ main, #pages {
 
 #navbar-top {
     pointer-events: all;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: 8px;
     margin-top: 0;
     padding-bottom: 8px;
     border-bottom: 1px solid rgb(221, 221, 221);
@@ -287,7 +292,22 @@ main, #pages {
     box-sizing: border-box;
     background: linear-gradient(rgba(0, 0, 0, 0.671), rgba(0, 0, 0, 0));
 }
-  
+ 
+#navbar-toggle {
+    display: none;
+}
+
+#navbar-toggle-button {
+    display: none;
+}
+
+#navbar-menu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 8px;
+}
+
 #navbar-top nav {
     margin-left: 32px;
 }
@@ -306,4 +326,273 @@ main, #pages {
     text-decoration: none;
     font-size: 16px;
     color: rgb(221, 221, 221);
+}
+
+@media all and (max-width: 720px) {
+    html {
+        font-size: 12px;
+    }
+
+    .section .section-title {
+        margin-top: 48px;
+    }
+
+    .tilted-bottom {
+        height: 70%;
+    }
+    
+    .tilted-top {
+        height: 15%;
+    }
+
+    #empresa-logo {
+        /*position: relative;*/
+        width: 20%;
+        margin-top: 48px;
+        /*float: right;
+        margin-right: 48px;*/
+    }
+
+    #empresa p {
+        float: right;
+        margin: 0 32px;
+        margin-top: 32px;
+        font-size: 120%;
+    }
+
+    .problema {
+        width: 160px;
+        padding: 30px 14px;
+    }
+
+    .problema-separator {
+        width: 32px;
+    }
+
+    #problema-fluxg {
+        width: 400px;
+    }
+
+    #solucao #app-logo {
+        width: 15%;
+    }
+
+    #solucao p {
+        margin-top: 45%;
+    }
+
+    #equipe-lista {
+        margin-top: 40px;
+    }
+
+    .nome-atribuicao {
+        margin-left: 24px;
+    }
+
+    .membro p {
+        margin-left: 56px;
+    }
+
+    .nome-atribuicao h2 {
+        margin-bottom: 6px;
+    }
+
+    #contato form {
+        padding: 14px 20px;
+        margin: 40px;
+        margin-top: 24px;
+    }
+
+    #contato input {
+        padding: 6px 14px;
+    }
+    
+    #contato textarea {
+        padding: 6px 14px;
+    }
+
+    #navbar-toggle-button {
+        display: inline-flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 32px;
+        height: 24px;
+        margin: 8px;
+        color: white;
+    }
+
+    #navbar-top {
+        padding: 0;
+    }
+
+    #navbar-toggle-button > span {
+        width: 100%;
+        height: 4px;
+        background-color: white;
+        border-radius: 999px;
+    }
+
+    #navbar-menu {
+        position: absolute;
+        flex-direction: column;
+        align-items: flex-start;
+        overflow: hidden;
+        max-height: 100%;
+        transition: all 0.5s ease-in-out;
+        background-color: rgba(0, 0, 0, 0.85);
+        padding: 16px;
+        border-bottom-right-radius: 16px;
+    }
+
+    #navbar-toggle:not(:checked) ~ #navbar-menu {
+        max-height: 0%;
+        padding: 0 16px;
+        opacity: 0;
+    }
+
+    #navbar-top nav {
+        margin-left: 0;
+    }
+
+    #navbar-top ul {
+        flex-direction: column;
+        margin-top: 32px;
+    }
+
+    #navbar-top li:not(:first-child) {
+        margin-left: 0;
+        margin-top: 32px;
+    }
+}
+
+@media all and (max-width: 560px) {
+    html {
+        font-size: 10px;
+    }
+
+    .tilted-bottom {
+        height: 72%;
+    }
+    
+    .tilted-top {
+        height: 13%;
+    }
+
+    .problema {
+        width: 128px;
+        padding: 24px 10px;
+    }
+
+    .problema-separator {
+        width: 24px;
+        height: 3px;
+    }
+
+    #problema-fluxg {
+        width: 325px;
+    }
+
+    #solucao #app-logo {
+        width: 20%;
+    }
+
+    #solucao p {
+        margin-top: 55%;
+    }
+
+    .nome-atribuicao {
+        margin-left: 20px;
+    }
+
+    .membro p {
+        margin-left: 52px;
+    }
+
+    .nome-atribuicao h2 {
+        margin-bottom: 4px;
+    }
+
+    #contato form {
+        padding: 14px 16px;
+        margin: 24px;
+        margin-top: 24px;
+    }
+
+    #contato input {
+        padding: 4px 12px;
+    }
+    
+    #contato textarea {
+        padding: 4px 12px;
+    }
+}
+
+@media all and (max-width: 450px) {
+    html {
+        font-size: 8px;
+    }
+
+    #empresa-logo {
+        /*position: relative;*/
+        width: 30%;
+        margin-top: 60px;
+        /*float: right;
+        margin-right: 48px;*/
+    }
+
+    .tilted-bottom {
+        height: 70%;
+    }
+    
+    .tilted-top {
+        height: 12%;
+    }
+
+    .problema {
+        width: 100px;
+        padding: 16px 8px;
+    }
+
+    .problema-separator {
+        width: 16px;
+        height: 2px;
+    }
+
+    #problema-fluxg {
+        width: 240px;
+    }
+
+    #solucao #app-logo {
+        width: 25%;
+    }
+
+    #solucao p {
+        margin-top: 70%;
+    }
+
+    .nome-atribuicao {
+        margin-left: 16px;
+    }
+
+    .membro p {
+        margin-left: 32px;
+    }
+
+    .nome-atribuicao h2 {
+        margin-bottom: 1px;
+    }
+
+    #contato form {
+        padding: 10px 10px;
+        margin: 16px;
+        margin-top: 24px;
+    }
+
+    #contato input {
+        padding: 4px 10px;
+    }
+    
+    #contato textarea {
+        padding: 4px 10px;
+    }
 }
