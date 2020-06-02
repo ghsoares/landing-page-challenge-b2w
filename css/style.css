@@ -1,0 +1,267 @@
+@import "./reset.css";
+@import url('https://fonts.googleapis.com/css2?family=Muli&display=swap');
+
+* {
+    font-family: 'Muli', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+main, #pages {
+    width: 100%;
+    height: 100%;
+}
+
+.section {
+    width: inherit;
+    height: inherit;
+    position: relative;
+    background-color: #434E4C;
+    overflow: hidden;
+}
+
+.section > section {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    display: inline-block;
+}
+
+.section .section-title {
+    position: relative;
+    margin-top: 96px;
+    margin-left: 16px;
+    font-size: 48px;
+    font-weight: 400;
+}
+
+.tilted-bottom {
+    position: absolute;
+    background-color: white;
+    width: 200%;
+    height: 80%;
+    bottom: 0;
+    left: 50%;
+    transform: rotate(-5deg) translateX(-50%);
+    box-shadow: 0px 0px 32px rgba(0, 0, 0, 0.25);
+    z-index: 0;
+}
+
+.tilted-top {
+    position: absolute;
+    background-color: white;
+    width: 200%;
+    height: 75%;
+    top: -75%;
+    left: 50%;
+    transform: rotate(-5deg) translateX(-50%);
+    box-shadow: 0px 0px 32px rgba(0, 0, 0, 0.25);
+    z-index: 0;
+}
+
+#landing {
+    background-color: rgb(225, 255, 245);
+}
+
+#landing-background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    box-shadow: inset 0px 0px 250px rgba(0, 0, 0, 0.85);
+}
+
+#landing-background > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    mix-blend-mode: multiply;
+}
+
+#empresa h3, #solucao h3 {
+    color: white;
+}
+
+#empresa p {
+    float: right;
+    margin: 0 32px;
+    margin-top: 80px;
+    font-size: 24px;
+}
+
+#empresa-logo {
+    position: relative;
+    width: 10%;
+    float: right;
+    margin-right: 48px;
+}
+
+#problemas {
+    display: flex;
+    flex-direction: row;
+    margin-top: 64px;
+    justify-content: center;
+    align-items: center;
+    filter: drop-shadow(8px 8px 8px rgba(43, 10, 10, 0.521));
+}
+
+.problema {
+    width: 256px;
+    padding: 32px 16px;
+    box-sizing: border-box;
+    background-color: #8E3B05;
+    border-radius: 16px;
+    color: white;
+    font-size: 18px;
+    position: relative;
+}
+
+.problema > .problem-img {
+    margin-bottom: 64px;
+    width: 100%;
+}
+
+.problema > .problem-warning {
+    width: 25%;
+    position: absolute;
+    top: -5%;
+    right: -15%;
+}
+
+.problema-separator {
+    width: 64px;
+    height: 8px;
+    background-color: #8E3B05;
+}
+
+#problema-fluxg {
+    display: flex;
+    width: 651px;
+    margin: auto;
+    justify-content: space-between;
+    border-bottom: 4px solid rgb(6, 255, 180);
+}
+
+.problem-path {
+    width: 4px;
+    height: 64px;
+    background-color: rgb(6, 255, 180);
+}
+
+#problem-fluxg-cont {
+    margin: auto;
+    display: block;
+    width: 4px;
+    height: 256px;
+    background-color: rgb(6, 255, 180);
+}
+
+#solucao #solucao-fluxg-cont {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 4px;
+    height: 256px;
+    background-color: rgb(6, 255, 180);
+}
+
+#solucao #app-logo {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    width: 10%;
+    box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.25);
+}
+
+#solucao p {
+    padding: 0 48px;
+    margin-top: 20%;
+    font-size: 24px;
+}
+
+#equipe-lista {
+    display: flex;
+    flex-direction: column;
+    margin-top: 80px;
+    padding: 0 32px;
+}
+
+.membro {
+    display: flex;
+    flex-direction: row;
+    padding: 16px;
+    background-color: white;
+    border-radius: 16px;
+    align-items: center;
+    box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.25);
+}
+
+.membro:not(:first-child) {
+    margin-top: 12px;
+}
+
+.nome-atribuicao {
+    margin-left: 32px;
+}
+
+.nome-atribuicao h2 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.nome-atribuicao h4 {
+    color: #565656;
+}
+
+.membro p {
+    margin-left: 128px;
+}
+
+#fixed {
+    position: fixed;
+    width: inherit;
+    height: inherit;
+    bottom: 0;
+    pointer-events: none;
+}
+
+#navbar-top {
+    pointer-events: all;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 8px;
+    margin-top: 0;
+    padding-bottom: 8px;
+    border-bottom: 1px solid rgb(221, 221, 221);
+    overflow: hidden;
+    box-sizing: border-box;
+    background: linear-gradient(rgba(0, 0, 0, 0.671), rgba(0, 0, 0, 0));
+}
+  
+#navbar-top nav {
+    margin-left: 32px;
+}
+
+#navbar-top ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#navbar-top li:not(:first-child) {
+    margin-left: 32px;
+}
+
+#navbar-top li > a {
+    text-decoration: none;
+    font-size: 16px;
+    color: rgb(221, 221, 221);
+}
