@@ -328,6 +328,17 @@ main, #pages {
     color: rgb(221, 221, 221);
 }
 
+footer {
+    font-size: 100%;
+    position: absolute;
+    bottom: 0;
+    padding: 8px;
+    left: 0;
+    right: 0;
+    background-color: white;
+    color: #6A6A6A;
+}
+
 @media all and (max-width: 720px) {
     html {
         font-size: 12px;
